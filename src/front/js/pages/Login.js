@@ -5,8 +5,8 @@ import { Navigate } from "react-router-dom";
 
 export const Login = () => {
 	const { store, actions } = useContext(Context);
-	const [email, setEmail] = useState();
-	const [password, setPassword] = useState();
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
 	const handleLogIn = async(event) => {
 		// Validate theres an email
 		// Validate there is a password
@@ -23,12 +23,12 @@ export const Login = () => {
 			<form>
 				<input 
 				type="text" 
-				placeholder="email"
+				placeholder="Email"
 				value={email}
 				onChange={(event) => setEmail(event.target.value)}/>
 				<input 
 				type="text" 
-				placeholder="email"
+				placeholder="Password"
 				value={password}
 				onChange={(event) => setPassword(event.target.value)}/>
 				<button type="button" onClick={handleLogIn}>submit</button>
