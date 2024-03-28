@@ -20,6 +20,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
+			logIn: async (body) => {
+				const response = await fetch(
+					process.env.BACKEND_URL + "/api/log-ins", {
+						method: "POST",
+						body: JSON.stringify(body),
+						headers: {
+							"Content-Type": "application/json"
+						}
+					}
+				);
+				if (response.status !== 201) return false;
+
+				return true;
+			},
 
 			getMessage: async () => {
 				try{
