@@ -1,26 +1,26 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/home.css";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
+	const navigate = useNavigate();
 	const { store, actions } = useContext(Context);
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-	const handleLogIn = async(event) => {
-		// Validate theres an email
-		// Validate there is a password
-		const success = await actions.logIn ({
+	const handleLogin = async(event) => {
+		// validate there is an email
+		// validate there is a password
+		const success = await actions.logIn({
 			email: email,
 			password: password
 		});
 		if (success) {
-			Navigate("/profile");
-		} else {
-			alert("something went wrong");
-		}
-
-	}
+            navigate("/profile");
+	    } else {
+        alert("something went wrong");
+        }
+    }
 
 	return (
 		<div className="text-center mt-5">
@@ -35,7 +35,7 @@ export const Login = () => {
 				placeholder="Password"
 				value={password}
 				onChange={(event) => setPassword(event.target.value)}/>
-				<button type="button" onClick={handleLogIn}>submit</button>
+				<button type="button" onClick={handleLogin}>submit</button>
 
 
 			</form>
