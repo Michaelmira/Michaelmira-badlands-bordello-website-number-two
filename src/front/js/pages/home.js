@@ -1,40 +1,26 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
+import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
-import { Navigate } from "react-router-dom";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
-	const [email, setEmail] = useState();
-	const [password, setPassword] = useState();
-	const handleLogIn = async(event) => {
-		// Validate theres an email
-		// Validate there is a password
-		const success = await actions.logIn ({
-			email: email,
-			password: password
-		});
-		if (success) Navigate("/profile")
-
-	}
 
 	return (
 		<div className="text-center mt-5">
-			<form>
-				<input 
-				type="text" 
-				placeholder="email"
-				value={email}
-				onChange={(event) => setEmail(event.target.value)}/>
-				<input 
-				type="text" 
-				placeholder="email"
-				value={password}
-				onChange={(event) => setPassword(event.target.value)}/>
-				<button type="button" onClick={handleLogIn}>submit</button>
-
-
-			</form>
+			<h1>Hello Rigo!!</h1>
+			<p>
+				<img src={rigoImageUrl} />
+			</p>
+			<div className="alert alert-info">
+				{store.message || "Loading message from the backend (make sure your python backend is running)..."}
+			</div>
+			<p>
+				This boilerplate comes with lots of documentation:{" "}
+				<a href="https://start.4geeksacademy.com/starters/react-flask">
+					Read documentation
+				</a>
+			</p>
 		</div>
 	);
 };

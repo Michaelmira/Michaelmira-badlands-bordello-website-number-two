@@ -9,6 +9,16 @@ Build web applications using React.js for the front end and python/flask for you
 - Use of .env file.
 - SQLAlchemy integration for database abstraction.
 
+
+### QUICKSTART! 
+### Terminal 1, pipenv run start
+### Terminal 2, psql -h localhost -U gitpod example
+### Terminal 3, npm run start
+
+### Dont forget to update .env File if you create a new codespace.
+### Dont forget to set port 3001 to Public
+
+
 ### 1) Installation:
 
 > If you use Github Codespaces (recommended) or Gitpod this template will already come with Python, Node and the Posgres Database installed. If you are working locally make sure to install Python 3.10, Node 
