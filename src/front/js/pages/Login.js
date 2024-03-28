@@ -14,7 +14,11 @@ export const Login = () => {
 			email: email,
 			password: password
 		});
-		if (success) Navigate("/profile")
+		if (success) {
+			Navigate("/profile");
+		} else {
+			alert("something went wrong");
+		}
 
 	}
 
