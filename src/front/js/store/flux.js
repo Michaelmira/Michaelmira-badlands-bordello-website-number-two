@@ -54,8 +54,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			fetchPrivateEndpoint: async () => {
+				const store = getStore();
 				const response = await fetch (
-					process.env.BACKEND_URL + "/api/private"
+					process.env.BACKEND_URL + "/api/private", {
+						headers: {
+							"Content-Type": "application/json",
+							"Authorization": "Bearer " + store.token
+						}
+					}
 				);
 			},
 
@@ -71,6 +77,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					console.log("Error loading message from backend", error)
 				}
 			},
+
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();

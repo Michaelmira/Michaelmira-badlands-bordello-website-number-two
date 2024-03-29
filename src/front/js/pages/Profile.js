@@ -19,9 +19,9 @@ export const Profile = (props) => {
                     onClick={(event) => actions.fetchPrivateEndpoint()}>
                         Click me
                 </button>
+                <p>{store.privateData}</p>
 
             </div>
-            <h2>Hello Profile</h2>
         </>
     )
 }
