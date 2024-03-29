@@ -63,6 +63,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 						}
 					}
 				);
+				const body = await response.json();
+				setStore({
+					privateData: body
+				});
 			},
 
 			getMessage: async () => {
