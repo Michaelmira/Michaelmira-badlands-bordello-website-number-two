@@ -2,18 +2,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			message: null,
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			],
 			token: undefined,
 			localStorageChecked: undefined
 		},
@@ -42,15 +30,40 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				return true;
 			},
+
 			checkIfTokenInLocalStorage: () => {
-				if (localStorage.getItem("token")) {
+				if (localStorage.getItem("token")){
 					setStore({
 						token: localStorage.getItem("token")
 					});
-				};
+				}
+					// localStorageChecked: true
+			},
+
+			fetchPrivateEndpoint: async () => {
+				const store = getStore();
+				const response = await fetch(
+					process.env.BACKEND_URL + "/api/private", {
+						headers: {
+							"Content-type": "application/json",
+							"Authorization": "Bearer " + store.token
+						}
+					}
+				);
+				const body = await response.json();
 				setStore({
-					localStorageChecked: true
+					privateData: body
 				});
+			},
+
+			logUserOut: () => {
+				setStore({
+					token: undefined
+				});
+				if (localStorage.getItem("token")) {
+					localStorage.reomoveItem("token");
+				}
+				console.log(getStore().token)
 			},
 
 			getMessage: async () => {
@@ -65,6 +78,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					console.log("Error loading message from backend", error)
 				}
 			},
+
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
