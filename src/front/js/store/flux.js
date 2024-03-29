@@ -42,23 +42,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				return true;
 			},
+
 			checkIfTokenInLocalStorage: () => {
-				if (localStorage.getItem("token")) {
+				if (localStorage.getItem("token")){
 					setStore({
 						token: localStorage.getItem("token")
 					});
-				};
-				setStore({
-					localStorageChecked: true
-				});
+				}
+					// localStorageChecked: true
 			},
 
 			fetchPrivateEndpoint: async () => {
 				const store = getStore();
-				const response = await fetch (
+				const response = await fetch(
 					process.env.BACKEND_URL + "/api/private", {
 						headers: {
-							"Content-Type": "application/json",
+							"Content-type": "application/json",
 							"Authorization": "Bearer " + store.token
 						}
 					}
@@ -74,7 +73,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					token: undefined
 				});
 				if (localStorage.getItem("token")) {
-					localStoreage.getItem("token");
+					localStorage.reomoveItem("token");
 				}
 				console.log(getStore().token)
 			},
