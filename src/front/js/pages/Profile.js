@@ -13,6 +13,14 @@ export const Profile = (props) => {
 
     return (
         <>
+            <div className="d-felx flex-column w-100 align-items-center" >
+                <h2>Hello Profile</h2>
+                <button
+                    onClick={(event) => actions.fetchPrivateEndpoint()}>
+                        Click me
+                </button>
+
+            </div>
             <h2>Hello Profile</h2>
         </>
     )
