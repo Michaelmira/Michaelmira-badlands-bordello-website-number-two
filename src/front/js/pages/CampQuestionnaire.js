@@ -12,7 +12,7 @@ export const CampQuestionnaire = () => {
     	<form id="badlands-form">
           	<div className="card">
             {/* <!-- Header --> */}
-            	<div className="card-header">
+            	<div className="card-header" style={{ backgroundColor: 'rgb(204, 126, 84)' }} >
               		<strong className="fs-4">Badlands Bordello Camper Application</strong>
             	</div>
             	{/* <!-- Header -->
@@ -115,7 +115,7 @@ export const CampQuestionnaire = () => {
             	</div>
 				{/* <!--We accept: and Message:-->
 				<!-- Footer  --> */}
-            	<div className="container pb-2 bg-light border">
+            	<div className="container pb-2 border" style={{ backgroundColor: 'rgb(204, 126, 84)' }}>
                 	<div className="d-grid gap-2 d-md-flex justify-content-md-end pt-2">
 						<button className="btn btn-success me-md-2" type="button">Cancel</button>
 						<button className="btn btn-primary" type="submit">Submit</button>
