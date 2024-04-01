@@ -9,6 +9,7 @@ import { Single } from "./pages/single";
 import injectContext from "./store/appContext";
 import { Login } from "./pages/Login";
 import { Profile } from "./pages/Profile";
+import { CampQuestionnaire } from "./pages/CampQuestionnaire";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
@@ -29,6 +30,7 @@ const Layout = () => {
                         <Route element={<Home />} path="/" />
                         <Route element={<Login />} path="/log-in" />
                         <Route element={<Profile />} path="/profile" />
+                        <Route element={<CampQuestionnaire />} path="/camp-questionnaire" />
                      
                         <Route element={<Demo />} path="/demo" />
                         <Route element={<Single />} path="/single/:theid" />
