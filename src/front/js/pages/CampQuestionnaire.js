@@ -18,7 +18,7 @@ export const CampQuestionnaire = () => {
             	{/* <!-- Header -->
             	<!-- Danger Alert --> */}
             	<div className="container pt-4">
-                	<div id="danger-alert" className="alert alert-danger" role="alert" style="display: none;">
+                	<div id="danger-alert" className="alert alert-danger" role="alert" style={ {display: "none" }}>
                     	Some fields are missing
                 	</div>
             	</div>
