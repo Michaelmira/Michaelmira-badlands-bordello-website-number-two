@@ -78,7 +78,7 @@ def delete_questionnaire(questionnaire_id):
     if questionnaire is None:
         return jsonify ({"msg": "questionnaire not found"}), 404
     
-    db.session.delete(work_order)
+    db.session.delete(questionnaire)
     db.session.commit()
 
     return jsonify({"msg": "questionnaire successfully deleted"}), 200
