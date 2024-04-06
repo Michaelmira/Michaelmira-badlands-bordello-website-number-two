@@ -39,6 +39,7 @@ def add_questionnaire():
     return jsonify(response_body), 201
         
 @api.route('/questionnaire/edit/<int:questionnaire_id>', methods=['PUT'])
+@jwt_required()
 def edit_questionnaire(questionnaire_id):
     full_name = request.json.get("full_name")
     phone_number = request.json.get("phone_number")
@@ -68,6 +69,19 @@ def edit_questionnaire(questionnaire_id):
     db.session.commit()
     db.session.refresh(questionnaire)
     return jsonify({"questionnaire": questionnaire.serialize()}), 200
+
+@api.route('/questionnaire/delete/<int:questionnaire_id>', methods=['DELETE'])
+@jwt_required()
+def delete_questionnaire(questionnaire_id):
+    questionnaire = Questionnaire.query.get(questionnaire_id)
+
+    if questionnaire is None:
+        return jsonify ({"msg": "questionnaire not found"}), 404
+    
+    db.session.delete(work_order)
+    db.session.commit()
+
+    return jsonify({"msg": "questionnaire successfully deleted"}), 200
 
 
 @api.route('/log-ins', methods=['POST'])
