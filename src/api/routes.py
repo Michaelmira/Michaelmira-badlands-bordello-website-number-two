@@ -39,7 +39,7 @@ def add_questionnaire():
     return jsonify(response_body), 201
         
 @api.route('/questionnaire/edit/<int:questionnaire_id>', methods=['PUT'])
-def edit_questionnaire():
+def edit_questionnaire(questionnaire_id):
     full_name = request.json.get("full_name")
     phone_number = request.json.get("phone_number")
     burner_email = request.json.get("burner_email")
@@ -53,7 +53,21 @@ def edit_questionnaire():
     if None in (full_name, phone_number, burner_email, campers, space_required, leader_question, camp_donation, early_arrival, why_go):
         return jsonify({"msg": "Some required fields are missing"}), 400 
     
-    questionnaire = questionnaire.query.get(questionnaire_id)
+    questionnaire = Questionnaire.query.get(questionnaire_id)
+    if questionnaire is None:
+        return jsonify({"msg": "Questionnaire not found"}), 404
+    questionnaire.full_name = full_name
+    questionnaire.phone_number = phone_number
+    questionnaire.burner_email = burner_email
+    questionnaire.campers = campers
+    questionnaire.space_required = space_required
+    questionnaire.leader_question = leader_question
+    questionnaire.camp_donation = camp_donation
+    questionnaire.early_arrival = early_arrival
+    questionnaire.why_go = why_go
+    db.session.commit()
+    db.session.refresh(questionnaire)
+    return jsonify({"questionnaire": questionnaire.serialize()}), 200
 
 
 @api.route('/log-ins', methods=['POST'])
