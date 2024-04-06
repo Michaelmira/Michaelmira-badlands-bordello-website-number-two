@@ -20,13 +20,27 @@ def all_questionnaires():
 
 @api.route('/questionnaire', methods=['POST'])
 def add_questionnaire():
-    
+    full_name = request.json.get("full_name", None)
+    phone_number = request.json.get("phone_number", None)
+    burner_email = request.json.get("burner_email", None)
+    campers = request.json.get("campers", None)
+    space_required = request.json.get("space_required", None)
+    leader_question = request.json.get("leader_question", None) 
+    camp_donation = request.json.get("camp_donation", None) 
+    early_arrival  = request.json.get("early_arrival", None) 
+    why_go  = request.json.get("why_go", None) 
+    if full_name is None or phone_number is None or burner_email is None or campers is None or space_required is None or leader_question is None or camp_donation is None or early_arrival is None or why_go is None:
+        return jsonify({"msg": "Some required fields are missing"}), 400
+    questionnaire = Questionnaire (full_name=full_name, phone_number=phone_number, burner_email=burner_email, campers=campers, space_required=space_required, leader_question=leader_question, camp_donation=camp_donation, early_arrival=early_arrival, why_go=why_go)
+    db.session.add(questionnaire)
+    db.session.commit()
+    db.session.refresh(questionnaire)
+    response_body = {"msg": "Questionnaire succesfully submitted!", "questionnaire":questionnaire.serialize()}
+    return jsonify(response_body), 201
+        
 
-# @api.route('/work-order/all', methods=['GET'])
-# def get_all_work_orders():
-#     work_orders = WorkOrder.query.all()
-#     serialized_work_orders = [wo.serialize() for wo in work_orders]
-#     return jsonify({"work_orders": serialized_work_orders}), 200
+
+
 
 
 @api.route('/log-ins', methods=['POST'])
