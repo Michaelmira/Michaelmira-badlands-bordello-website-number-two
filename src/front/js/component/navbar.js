@@ -17,7 +17,7 @@ export const Navbar = () => {
                         </button>
                     ) : (
                         <Link to="/log-in">
-                            <button className="btn btn-primary" style={{ backgroundColor: "#007bff", borderColor: "#007bff", color: "white", cursor: "pointer" }} >Log in</button>
+                            <button className="btn border-0" style={{ backgroundColor: "#000000", color: "#828282", cursor: "pointer" }} >Log in</button>
                         </Link>
                     )}
 				</div>

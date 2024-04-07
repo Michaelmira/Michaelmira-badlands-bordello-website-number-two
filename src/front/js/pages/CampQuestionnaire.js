@@ -117,8 +117,8 @@ export const CampQuestionnaire = () => {
 					<!-- Footer  --> */}
 					<div className="container pb-2 border-0" style={{ height: "70px", backgroundColor: "#000000", backgroundImage: 'url("https://www.transparenttextures.com/patterns/wood-pattern.png")' }}>
 						<div className="d-grid gap-2 d-md-flex justify-content-md-end pt-2">
-							<button className="btn btn-success me-md-2" type="button">Cancel</button>
-							<button className="btn btn-primary" type="submit">Submit</button>
+							<button style={{ backgroundColor: "#000000", color: "#828282", cursor: "pointer" }} className="btn me-md-2" type="button">Cancel</button>
+							<button style={{ backgroundColor: "#000000", color: "#828282", cursor: "pointer" }} className="btn" type="submit">Submit</button>
 						</div>
 					</div>
 				</div>
