@@ -9,15 +9,15 @@ export const CampQuestionnaire = () => {
 	return (
     
 		<div className="container bg-dark pt-4">
-			<form id="badlands-form">
-				<div className="card">
+			<form id="badlands-form ">
+				<div className="card text-dark border-0 " style={{ color: "#000000", backgroundColor: "#575757" }} >
 				{/* <!-- Header --> */}
 					<div className="card-header" style={{ height: "70px", backgroundColor: "#000000", backgroundImage: 'url("https://www.transparenttextures.com/patterns/wood-pattern.png")' }} >
-						<strong className="fs-4">Badlands Bordello Camper Application</strong>
+						<strong className="fs-4 text-light ">Badlands Bordello Camper Application</strong>
 					</div>
 					{/* <!-- Header -->
 					<!-- Danger Alert --> */}
-					<div className="container pt-4">
+					<div className="container pt-4 ">
 						<div id="danger-alert" className="alert alert-danger" role="alert" style={ {display: "none" }}>
 							Some fields are missing
 						</div>
@@ -30,7 +30,7 @@ export const CampQuestionnaire = () => {
 								<div className="card-text" ><strong>Full Name</strong></div>
 								<div className="row">
 									<div className="input-group mb-3">
-										<input type="text" name="full-name" id="full-name" className="form-control" placeholder="First, Last." aria-label="Recipient's username" aria-describedby="basic-addon2" />
+										<input type="text" name="full-name" style={{backgroundColor: "#000000"}} id="full-name" className="form-control text-light border-0" placeholder="First, Last." aria-label="Recipient's username" aria-describedby="basic-addon2" />
 									</div>
 								</div>
 							</div>
