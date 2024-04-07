@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 export const Navbar = () => {
 	const {store, actions} =useContext(Context);
 	return (
-		<nav className="navbar navbar-light" style={{ height: "70px", backgroundColor: "#855000", backgroundImage: 'url("https://www.transparenttextures.com/patterns/wood-pattern.png")' }} >
+		<nav className="navbar navbar-light" style={{ height: "70px", backgroundColor: "#000000", backgroundImage: 'url("https://www.transparenttextures.com/patterns/wood-pattern.png")' }} >
 			<div className="container">
 				<Link to="/">
 					<span className="navbar-brand mb-0 h1">React Boilerplate</span>
