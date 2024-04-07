@@ -13,8 +13,8 @@ export const CampQuestionnaire = () => {
 				<div className="card text-dark border-0 " style={{ color: "#000000", backgroundColor: "#575757" }} >
 				{/* <!-- Header --> */}
 					<div className="card-header" style={{ height: "70px", backgroundColor: "#000000", backgroundImage: 'url("https://www.transparenttextures.com/patterns/wood-pattern.png")' }} >
-						<strong className="fs-4" style={{ color: "#575757" }} >Badlands Bordello Camper Application</strong>
-					</dgi
+						<h1 className="fs-4" style={{ color: "#828282" }} ><strong>Badlands Bordello Camper Application</strong></h1>
+					</div>
 					{/* <!-- Header -->
 					<!-- Danger Alert --> */}
 					<div className="container pt-4 ">
@@ -38,7 +38,7 @@ export const CampQuestionnaire = () => {
 								<div className="cvc-text" ><strong> Phone Number </strong></div>
 								<div className="row">
 									<div className="input-group mb-3">
-										<input type="text" name="phone" id="phone" style={{backgroundColor: "#000000"}} className="form-control border-0" placeholder="(000)000-0000" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+										<input type="text" name="phone" id="phone" style={{backgroundColor: "#000000"}} className="form-control border-0 text-light  " placeholder="(000)000-0000" aria-label="Recipient's username" aria-describedby="basic-addon2" />
 									</div>
 								</div>
 							</div>
@@ -46,7 +46,7 @@ export const CampQuestionnaire = () => {
 								<div className="amount-text"><strong>Burner Account Email</strong></div>
 								<div className="row">
 									<div className="input-group mb-3">
-										<input type="text" name="email-address" id="email-address" className="form-control border-0" style={{backgroundColor: "#000000"}} placeholder="Burner Email" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+										<input type="text" name="email-address" id="email-address" className="form-control border-0 text-light " style={{backgroundColor: "#000000"}} placeholder="Burner Email" aria-label="Recipient's username" aria-describedby="basic-addon2" />
 									</div>
 								</div>
 							</div>
@@ -58,11 +58,11 @@ export const CampQuestionnaire = () => {
 						<div className="row">
 							<div className="col-6">
 								<div className= "pb-2" ><strong>Names Of Campers In Your Dwelling</strong></div>
-								<input type="text" className="form-control border-0" style={{backgroundColor: "#000000"}} name="campers" id="campers" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
+								<input type="text" className="form-control border-0 text-light " style={{backgroundColor: "#000000"}} name="campers" id="campers" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
 							</div>
 							<div className="col-6">
 								<div className="pb-2"><strong>Space requirement for Dwelling, Cars, RV, Etc.</strong></div>
-								<input type="text" className="form-control border-0" style={{backgroundColor: "#000000"}} name="space" id="space" aria-label="Recipient's username" placeholder="ex. 1 car 1 Truck 1 trailer 24ft Kodiak Tent 10by14ft " aria-describedby="basic-addon2"/>
+								<input type="text" className="form-control border-0 text-light " style={{backgroundColor: "#000000"}} name="space" id="space" aria-label="Recipient's username" placeholder="ex. 1 car 1 Truck 1 trailer 24ft Kodiak Tent 10by14ft " aria-describedby="basic-addon2"/>
 							</div>
 						</div>
 					</div>
@@ -72,12 +72,12 @@ export const CampQuestionnaire = () => {
 						<div className="row">
 							<div className="col-6">
 								<div className="pb-2 pt-2"><strong>Would you like to sign up as a leader in creating and decorating your own themed 12by12 Sideroom.</strong></div>
-								<input type="text" className="form-control border-0" style={{backgroundColor: "#000000"}}  name="leader" id="leader" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
+								<input type="text" className="form-control border-0 text-light " style={{backgroundColor: "#000000"}}  name="leader" id="leader" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
 							</div>
 							<div className="col-3 pt-2">
-								<label for="Camp Mandatory Donation" name="arrivalDonation" className="form-label border-0" ><strong>Camp Manditory Donation Per/Human</strong></label>
-									<select name="arrival-strike" id="arrivalDonation" className="form-select border-0"style={{backgroundColor: "#000000"}}>
-										<option selected>Pick a Option</option>
+								<label for="Camp Mandatory Donation" name="arrivalDonation" className="form-label border-0 " ><strong>Camp Manditory Donation Per/Human</strong></label>
+									<select name="arrival-strike" id="arrivalDonation" className="form-select border-0 "style={{color: "#575757", backgroundColor: "#000000"}}>
+										<option  selected>Pick a Option</option>
 										<option value="value1">Early Arrival, Build, Strike 350$</option>
 										<option value="value2">Early Arrival, Build, NO STRIKE 450$</option>
 										<option value="value3">Strike ONLY 450$</option>
@@ -86,7 +86,7 @@ export const CampQuestionnaire = () => {
 							</div>
 							<div className="col-3">
 								<div className="pb-2 pt-2"><strong>Early Arrival? Yes/No + How Many </strong></div>
-								<input type="text" name="early" id="early" className="form-control border-0" style={{backgroundColor: "#000000"}} placeholder="Yes 3 Friday Aug 23rd or No"  aria-label="Recipient's username" aria-describedby="basic-addon2"/>
+								<input type="text" name="early" id="early" className="form-control border-0 text-light " style={{backgroundColor: "#000000"}} placeholder="Yes 3 Friday Aug 23rd or No"  aria-label="Recipient's username" aria-describedby="basic-addon2"/>
 							</div>
 						</div>
 					</div>
@@ -108,7 +108,7 @@ export const CampQuestionnaire = () => {
 								<div className="col-md-auto">
 									<p><strong>Why do you want to go to Burning Man?</strong>
 									</p>
-									<textarea name="why-do-you-want-to-go" id="why" className="comments form-control border-0" style={{backgroundColor: "#000000"}} rows="4"></textarea>
+									<textarea name="why-do-you-want-to-go" id="why" className="comments form-control border-0 text-light " style={{backgroundColor: "#000000"}} rows="4"></textarea>
 								</div>
 							</div>
 						</div>
