@@ -8,7 +8,7 @@ export const Navbar = () => {
 		<nav className="navbar navbar-light" style={{ height: "70px", backgroundColor: "#000000", backgroundImage: 'url("https://www.transparenttextures.com/patterns/wood-pattern.png")' }} >
 			<div className="container">
 				<Link to="/" style={{ textDecoration: 'underline', textDecorationColor: 'black' }} >
-					<h1 className="navbar-brand mb-0" style={{textDecoration: 'none', color: "#828282" }} ><strong>Badlands Bordello</strong></h1>
+					<span className="navbar-brand pt-5" style={{textDecoration: 'none', color: "#828282" }} ><h2><strong>Badlands Bordello</strong></h2></span>
 				</Link>
 				<div className="ml-auto">
 					{store.token ? (

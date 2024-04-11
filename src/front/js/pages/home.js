@@ -3,30 +3,27 @@ import "../../styles/home.css";
 
 export const Home = () => (
 	<>
-		<div className="container-flex p-0">
-  			<ul className="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+		<div className="container-flex pt-2" >
+  			<ul className="nav nav-tabs d-flex justify-content-center border-0 "style={{ borderColor: 'black', color: '#626262' }}   id="myTab" role="tablist">
     			<li className="nav-item" role="presentation">
-      				<button className="nav-link active" id="question-tab" data-bs-toggle="tab" data-bs-target="#question" type="button" role="tab" aria-controls="question" aria-selected="true">Camper Questionnaire</button>
+      				<button className="nav-link active bg-dark" style={{ borderColor: 'black', color: '#626262' }}  id="question-tab" data-bs-toggle="tab" data-bs-target="#question" type="button" role="tab" aria-controls="question" aria-selected="true">Camper Questionnaire</button>
     			</li>
     			<li className="nav-item" role="presentation">
-      				<button className="nav-link" id="gallery-tab" data-bs-toggle="tab" data-bs-target="#gallery" type="button" role="tab" aria-controls="gallery" aria-selected="false">Gallery</button>
+      				<button className="nav-link bg-dark" id="gallery-tab" style={{ borderColor: 'black', color: '#626262' }}  data-bs-toggle="tab" data-bs-target="#gallery" type="button" role="tab" aria-controls="gallery" aria-selected="false">Gallery</button>
     			</li>
   			</ul>
-  			<div className="tab-content" id="myTabContent">
+  			<div className="tab-content"  id="myTabContent">
    				{/* <!-- Camper Questionnaire-Start -->
     			// <!-- Card Start --> */}
 				<div className="tab-pane fade show active mt-1" id="question" role="tabpanel" aria-labelledby="question">
-
-
-
 					<div className="container-flex text-center d-flex justify-content-center">
 						<div className="card mb-3 border border-0" >
 							<div className="row">
-								<div className="col-md-6">
+								<div className="col-md-6" style={{ borderColor: 'black', background: '#000000' }}  >
 									<img className="bbimage" style={{ width: '100%' }} src="https://i.ibb.co/kxcpbHv/0group-Photo2023.jpg"/>
 								</div>
-								<div className="col-md-6">
-									<div className="card-body justify-content-center" style={{ width: '100%', justifyContent: 'center' }}>
+								<div className="col-md-6" style={{ borderColor: 'black', background: '#000000' }}>
+									<div className="card-body justify-content-center" style={{ width: '100%', justifyContent: 'center', color: '#626262' }}>
 										<h5 className="card-title">Badlands Bordello 2024 + WAVELINK ART CAR</h5>
 										<p className="card-text"> Chill and open-minded camp that embraces adventure and welcomes anyone who wants to join in on the fun. Our members are a diverse group who share a love for new experiences and a laid-back approach to life. Whether we’re hanging out, enjoying a drink or two, or exploring the playa, we always prioritize having a good time and making meaningful connections. This year 2024 we will be hosting a Full-Bar, Djs, Events, and an Absynthe bar.<br /><br />
 										Our Full bar is open Monday - Friday 1 PM - 4 PM <br />
@@ -44,14 +41,14 @@ export const Home = () => (
 			
 
 				</div>
-				<div className="tab-pane fade" id="gallery" role="tabpanel" aria-labelledby="gallery">
+				<div className="tab-pane fade bg-dark" id="gallery" role="tabpanel" aria-labelledby="gallery">
 					
 						<div className="d-flex justify-content-center">
 							<div className="">
-								<img className="bbGalleryPic" style={{ width: '508px' }} src="https://i.ibb.co/fX4M85f/1frontage2017.jpg" />
+								<img className="bbGalleryPic" style={{ width: '508px' }} src="https://i.ibb.co/kyBS1dY/7-Wavelink3.jpg" />
 							</div>
 							<div className="">
-								<img className="bbGalleryPic " style={{ width: '508px' }} src="https://i.ibb.co/YjqzBD0/2groupphoto2017.jpg" />
+								<img className="bbGalleryPic " style={{ width: '508px' }} src="https://i.ibb.co/L82LC25/8-Frontage-And-Wavelink.jpg" />
 							</div>
 							<div className="">
 								<img className="bbGalleryPic " style={{ width: '508px' }} src="https://i.ibb.co/NZHMBKp/3-Wavelink1.jpg" />
@@ -70,10 +67,10 @@ export const Home = () => (
 						</div>
 						<div className="d-flex justify-content-center">
 							<div className="">
-								<img className="bbGalleryPic " style={{ width: '508px' }} src="https://i.ibb.co/kyBS1dY/7-Wavelink3.jpg" />
+								<img className="bbGalleryPic " style={{ width: '508px' }} src="https://i.ibb.co/F3KJ03P/10-Wavelink4.jpg" />
 							</div>
 							<div className="">
-								<img class="bbGalleryPic "style={{ width: '508px' }} src="https://i.ibb.co/L82LC25/8-Frontage-And-Wavelink.jpg" />
+								<img class="bbGalleryPic "style={{ width: '508px' }} src="https://i.ibb.co/fX4M85f/1frontage2017.jpg" />
 							</div>
 							<div class="">
 								<img class="bbGalleryPic "style={{ width: '508px' }} src="https://i.ibb.co/Y23Vcnb/9-Interior1.jpg" />
