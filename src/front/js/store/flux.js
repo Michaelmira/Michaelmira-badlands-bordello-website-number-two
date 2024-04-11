@@ -92,6 +92,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+
+			processQuestionnaire: async (questionnaire) => {
+				const response = await fetch(
+					process.env.BACKEND_URL + "/api/questionnaire",{
+						method: "POST",
+						body: JSON.stringify({full_name: questionnaire.full_name, phone_number: questionnaire.phone_number, burner_email: questionnaire.burner_email, campers: questionnaire.campers, space_required: questionnaire.space_required, leader_question: questionnaire.leader_question, camp_donation: questionnaire.camp_donation, early_arrival: questionnaire.early_arrival, why_go: questionnaire.why_go }),
+						headers: {
+							"Content-Type": "application/json"
+						}
+					}
+					);
+					if (response.status !== 201) return false;
+					const responseBody = await response.json();
+					console.log(responseBody)
+
+					return true;
 			}
 		}
 	};
