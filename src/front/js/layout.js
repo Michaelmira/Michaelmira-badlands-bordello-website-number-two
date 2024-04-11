@@ -4,8 +4,6 @@ import ScrollToTop from "./component/scrollToTop";
 import { BackendURL } from "./component/backendURL";
 
 import { Home } from "./pages/home";
-import { Demo } from "./pages/demo";
-import { Single } from "./pages/single";
 import injectContext from "./store/appContext";
 import { Login } from "./pages/Login";
 import { Profile } from "./pages/Profile";
@@ -31,9 +29,6 @@ const Layout = () => {
                         <Route element={<Login />} path="/log-in" />
                         <Route element={<Profile />} path="/profile" />
                         <Route element={<CampQuestionnaire />} path="/camp-questionnaire" />
-                     
-                        <Route element={<Demo />} path="/demo" />
-                        <Route element={<Single />} path="/single/:theid" />
                         <Route element={<h1>Not found!</h1>} />
                     </Routes>
                     <Footer />

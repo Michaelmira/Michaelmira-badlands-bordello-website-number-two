@@ -7,7 +7,7 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-light" style={{ height: "70px", backgroundColor: "#000000", backgroundImage: 'url("https://www.transparenttextures.com/patterns/wood-pattern.png")' }} >
 			<div className="container">
-				<Link to="/" style={{ textDecoration: 'underline', textDecorationColor: 'black' }} >
+				<Link to="/" style={{ textDecoration: 'none', textDecorationColor: 'black' }} >
 					<h1 className="navbar-brand mb-0" style={{textDecoration: 'none', color: "#828282" }} ><strong>Badlands Bordello</strong></h1>
 				</Link>
 				<div className="ml-auto">
