@@ -5,7 +5,34 @@ import { Context } from "../store/appContext";
 
 export const CampQuestionnaire = () => {
 	const { store, actions } = useContext(Context);
-	
+	const { full_name, setFull_name } = useState("");
+	const { phone_number, setPhone_number } = useState("");
+	const { burner_email, setBurner_email } = useState("");
+	const { campers, setCampers } = useState("");
+	const { space_required, setSpace_required } = useState("");
+	const { leader_question, setLeader_question } = useState("");
+	const { camp_donation, setCamp_donation } = useState("");
+	const { early_arrival, setEarly_arrival } = useState("");
+	const { why_go, setWhy_go } = useState("");
+
+	const handleProcessQuestionnaire = async (event) => {
+        const success = await actions.processQuestionnaire({
+            full_name: email,
+            phone_number: password,
+            burner_email: first_name,
+            campers: last_name,
+            space_required: phone,
+            leader_question: address,
+            camp_donation: address,
+            early_arrival: address,
+            why_go: address
+        });
+        if (success) {
+            handleLogin();
+        } else {
+            alert("something went wrong");
+        }
+	}
 
 	return (
     
@@ -119,7 +146,12 @@ export const CampQuestionnaire = () => {
 					<div className="container pb-2 border-0" style={{ height: "70px", backgroundColor: "#000000", backgroundImage: 'url("https://www.transparenttextures.com/patterns/wood-pattern.png")' }}>
 						<div className="d-grid gap-2 d-md-flex justify-content-md-end pt-2">
 							<button style={{ backgroundColor: "#575757" }} className="btn text-black mt-2 mr-2 me-md-2" type="button">Cancel</button>
-							<button style={{ backgroundColor: "#575757" }} className="btn text-black mt-2 mr-2 " type="submit">Submit</button>
+							<button 
+							style={{ backgroundColor: "#575757" }} 
+							className="btn text-black mt-2 mr-2 " 
+							type="submit"
+							onClick={handleProcessQuestionnaire}
+							>Submit</button>
 						</div>
 					</div>
 				</div>
