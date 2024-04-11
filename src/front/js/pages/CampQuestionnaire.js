@@ -1,19 +1,18 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-
 import { Context } from "../store/appContext";
 
 export const CampQuestionnaire = () => {
 	const { store, actions } = useContext(Context);
-	const { full_name, setFull_name } = useState("");
-	const { phone_number, setPhone_number } = useState("");
-	const { burner_email, setBurner_email } = useState("");
-	const { campers, setCampers } = useState("");
-	const { space_required, setSpace_required } = useState("");
-	const { leader_question, setLeader_question } = useState("");
-	const { camp_donation, setCamp_donation } = useState("");
-	const { early_arrival, setEarly_arrival } = useState("");
-	const { why_go, setWhy_go } = useState("");
+	const [ full_name, setFull_name ] = useState("");
+	const [ phone_number, setPhone_number ] = useState("");
+	const [ burner_email, setBurner_email ] = useState("");
+	const [ campers, setCampers ] = useState("");
+	const [ space_required, setSpace_required ] = useState("");
+	const [ leader_question, setLeader_question ] = useState("");
+	const [ camp_donation, setCamp_donation ] = useState("");
+	const [ early_arrival, setEarly_arrival ] = useState("");
+	const [ why_go, setWhy_go ] = useState("");
 
 	const handleProcessQuestionnaire = async (event) => {
         const success = await actions.processQuestionnaire({
@@ -37,7 +36,7 @@ export const CampQuestionnaire = () => {
 	return (
     
 		<div className="container bg-dark pt-4">
-			<form id="badlands-form ">
+			<form >
 				<div className="card text-dark border-0 " style={{ color: "#000000", backgroundColor: "#575757" }} >
 				{/* <!-- Header --> */}
 					<div className="card-header" style={{ height: "70px", backgroundColor: "#000000", backgroundImage: 'url("https://www.transparenttextures.com/patterns/wood-pattern.png")' }} >
@@ -59,14 +58,11 @@ export const CampQuestionnaire = () => {
 								<div className="row">
 									<div className="input-group mb-3">
 										<input 
-											type="text" 
-											name="full-name" 
+											type="full_name"
 											style={{backgroundColor: "#000000"}} 
-											id="full-name" 
 											className="form-control text-light border-0" 
 											placeholder="First, Last." 
-											aria-label="Recipient's username" 
-											aria-describedby="basic-addon2" 
+											value={full_name}
 											onChange={(event) => setFull_name(event.target.value)}
 										/>
 									</div>
@@ -85,6 +81,7 @@ export const CampQuestionnaire = () => {
 											placeholder="(000)000-0000" 
 											aria-label="Recipient's username" 
 											aria-describedby="basic-addon2" 
+											value={phone_number}
 											onChange={(event) => setPhone_number(event.target.value)}
 										/>
 									</div>
@@ -103,6 +100,7 @@ export const CampQuestionnaire = () => {
 										placeholder="Burner Email" 
 										aria-label="Recipient's username" 
 										aria-describedby="basic-addon2" 
+										value={burner_email}
 										onChange={(event) => setBurner_email(event.target.value)}
 										/>
 									</div>
@@ -124,6 +122,7 @@ export const CampQuestionnaire = () => {
 									id="campers" 
 									aria-label="Recipient's username" 
 									aria-describedby="basic-addon2"
+									value={campers}
 									onChange={(event) => setCampers(event.target.value)}
 								/>
 							</div>
@@ -138,6 +137,7 @@ export const CampQuestionnaire = () => {
 									aria-label="Recipient's username" 
 									placeholder="ex. 1 car 1 Truck 1 trailer 24ft Kodiak Tent 10by14ft " 
 									aria-describedby="basic-addon2"
+									value={space_required}
 									onChange={(event) => setSpace_required(event.target.value)}
 								/>
 							</div>
@@ -157,6 +157,7 @@ export const CampQuestionnaire = () => {
 									id="leader" 
 									aria-label="Recipient's username" 
 									aria-describedby="basic-addon2"
+									value={leader_question}
 									onChange={(event) => setLeader_question(event.target.value)}
 								/>
 							</div>
@@ -167,6 +168,7 @@ export const CampQuestionnaire = () => {
 										id="arrivalDonation" 
 										className="form-select border-0" 
 										style={{color: "#575757", backgroundColor: "#000000"}}
+										value={camp_donation}
 										onChange={(event) => setCamp_donation(event.target.value)}
 									>
 										<option  selected>Pick a Option</option>
@@ -187,6 +189,7 @@ export const CampQuestionnaire = () => {
 									placeholder="Yes 3 Friday Aug 23rd or No"  
 									aria-label="Recipient's username" 
 									aria-describedby="basic-addon2"
+									value={early_arrival}
 									onChange={(event) => setEarly_arrival(event.target.value)}
 								/>
 							</div>
@@ -216,6 +219,7 @@ export const CampQuestionnaire = () => {
 									className="comments form-control border-0 text-light " 
 									style={{backgroundColor: "#000000"}} 
 									rows="4"
+									value={why_go}
 									onChange={(event) => setWhy_go(event.target.value)}
 									>
 									
@@ -232,7 +236,7 @@ export const CampQuestionnaire = () => {
 							<button 
 							style={{ backgroundColor: "#575757" }} 
 							className="btn text-black mt-2 mr-2 " 
-							type="submit"
+							type="button"
 							onClick={handleProcessQuestionnaire}
 							>Submit</button>
 						</div>
