@@ -30,7 +30,7 @@ class Questionnaire(db.Model):
     leader_question = db.Column(db.String(50), unique=False, nullable=False)
     camp_donation = db.Column(db.String(50), unique=False, nullable=False)
     early_arrival = db.Column(db.String(50), unique=False, nullable=False)
-    why_go = db.Column(db.String(50), unique=False, nullable=False)
+    why_go = db.Column(db.String(5000), unique=False, nullable=False)
 
     def serialize(self):
         return {
