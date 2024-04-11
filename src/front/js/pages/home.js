@@ -34,7 +34,7 @@ export const Home = () => (
 										Strike Saturday Aug 31 - Sunday Sep 1st </small></p>
 										<p className="card-text"><small className="text-body-secondary">We will be supplying a brand new Shower 2024, grey water removal, and a charging station  </small></p>
 									</div>
-									<Link to="/log-in">
+									<Link to="/camp-questionnaire">
 										<button className="btn bg-dark " style={{ color: "#828282" }} >Click here! <br /> Submit an application <br /> To Join <br /> the Badlands Bordello / Wavelink Art Car Family!</button>
 									</Link>
 								</div>
