@@ -22,15 +22,15 @@ class User(db.Model):
 class Questionnaire(db.Model):
     __tablename__="questionnaire"
     id = db.Column(db.Integer, primary_key=True)
-    full_name = db.Column(db.String(50), unique=True, nullable=False)
-    phone_number =  db.Column(db.String(50), unique=True, nullable=False)
-    burner_email = db.Column(db.String(50), unique=True, nullable=False)
-    campers = db.Column(db.String(100), unique=True, nullable=False)
-    space_required = db.Column(db.String(100), unique=True, nullable=False)
-    leader_question = db.Column(db.String(50), unique=True, nullable=False)
-    camp_donation = db.Column(db.String(50), unique=True, nullable=False)
-    early_arrival = db.Column(db.String(50), unique=True, nullable=False)
-    why_go = db.Column(db.String(50), unique=True, nullable=False)
+    full_name = db.Column(db.String(50), unique=False, nullable=False)
+    phone_number =  db.Column(db.String(50), unique=False, nullable=False)
+    burner_email = db.Column(db.String(50), unique=False, nullable=False)
+    campers = db.Column(db.String(100), unique=False, nullable=False)
+    space_required = db.Column(db.String(100), unique=False, nullable=False)
+    leader_question = db.Column(db.String(50), unique=False, nullable=False)
+    camp_donation = db.Column(db.String(50), unique=False, nullable=False)
+    early_arrival = db.Column(db.String(50), unique=False, nullable=False)
+    why_go = db.Column(db.String(50), unique=False, nullable=False)
 
     def serialize(self):
         return {
