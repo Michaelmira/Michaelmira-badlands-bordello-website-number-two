@@ -25,7 +25,7 @@ export const CampQuestionnaire = () => {
             camp_donation: camp_donation,
             early_arrival: early_arrival,
             why_go: why_go
-        });
+        }); 
         if (success) {
 			alert("You did it! Thank you for applying to camp at the Badlands Bordello!");
         } else {
@@ -53,7 +53,7 @@ export const CampQuestionnaire = () => {
 					<!-- Full Name, Phone, Email Inputs START --> */}
 					<div className="container">
 						<div className="row">
-							<div className="col-5">
+							<div className="col-md-5">
 								<div className="card-text text-black " ><strong>Full Name</strong></div>
 								<div className="row">
 									<div className="input-group mb-3">
@@ -68,7 +68,7 @@ export const CampQuestionnaire = () => {
 									</div>
 								</div>
 							</div>
-							<div className="col-3">
+							<div className="col-md-3 col-sm-6">
 								<div className="text-black " ><strong> Phone Number </strong></div>
 								<div className="row">
 									<div className="input-group mb-3">
@@ -87,7 +87,7 @@ export const CampQuestionnaire = () => {
 									</div>
 								</div>
 							</div>
-							<div className="col-4">
+							<div className="col-md-4 col-sm-6">
 								<div className="text-black"><strong>Burner Account Email</strong></div>
 								<div className="row">
 									<div className="input-group mb-3">
@@ -112,7 +112,7 @@ export const CampQuestionnaire = () => {
 					<!-- Campers and Dwelling Inputs START --> */}
 					<div className="container">
 						<div className="row">
-							<div className="col-6">
+							<div className="col-md-6">
 								<div className= "pb-2 text-black" ><strong>Names Of Campers In Your Dwelling</strong></div>
 								<input 
 									type="text" 
@@ -126,7 +126,7 @@ export const CampQuestionnaire = () => {
 									onChange={(event) => setCampers(event.target.value)}
 								/>
 							</div>
-							<div className="col-6">
+							<div className="col-md-6">
 								<div className="pb-2 text-black"><strong>Space requirement for Dwelling, Cars, RV, Etc.</strong></div>
 								<input 
 									type="text" 
@@ -147,7 +147,7 @@ export const CampQuestionnaire = () => {
 					<!-- Leader, Donation, Early arrival START --> */}
 					<div className="container">
 						<div className="row">
-							<div className="col-6">
+							<div className="col-md-6">
 								<div className="pb-2 pt-2 text-black "><strong>Would you like to sign up as a leader? Or create and decorate your own themed 10" by 8" or 10" by 20" Sideroom connected to main venue.</strong></div>
 								<input 
 									type="text" 
@@ -161,7 +161,7 @@ export const CampQuestionnaire = () => {
 									onChange={(event) => setLeader_question(event.target.value)}
 								/>
 							</div>
-							<div className="col-3 pt-2">
+							<div className="col-md-3 col-sm-6  pt-2">
 								<label for="Camp Mandatory Donation" name="arrivalDonation" className="form-label border-0 text-black " ><strong>Camp Manditory Donation Per/Human</strong></label>
 									<select 
 										name="arrival-strike" 
@@ -178,7 +178,7 @@ export const CampQuestionnaire = () => {
 										<option value="value3">NO WORK 550$</option>
 									</select>
 							</div>
-							<div className="col-3">
+							<div className="col-md-3 col-sm-6 ">
 								<div className="pb-2 pt-2 text-black"><strong>Early Arrival? Yes/No + How Many </strong></div>
 								<input 
 									type="text" 
@@ -199,7 +199,7 @@ export const CampQuestionnaire = () => {
 					<!--We accept: and Message:--> */}
 					<div className="container pt-2 pb-3"> 
 						<div className="row">
-							<div className="col-6">
+							<div className="col-md-6">
 								<div className="col-6">
 									<p className="pt-2 text-black "> <strong>Mandatory Donations</strong> </p>
 									<p className=" text-black "> 2 Handles, 4 Chasers for Bar </p>
@@ -209,7 +209,7 @@ export const CampQuestionnaire = () => {
 								</div>
 								<div className="col-6"></div>
 							</div>
-							<div className="col-6">
+							<div className="col-md-6">
 								<div className="col-md-auto">
 									<p><strong className=" text-black ">Why do you want to go to Burning Man?</strong>
 									</p>
