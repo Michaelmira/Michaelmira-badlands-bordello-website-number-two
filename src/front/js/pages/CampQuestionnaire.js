@@ -17,15 +17,15 @@ export const CampQuestionnaire = () => {
 
 	const handleProcessQuestionnaire = async (event) => {
         const success = await actions.processQuestionnaire({
-            full_name: email,
-            phone_number: password,
-            burner_email: first_name,
-            campers: last_name,
-            space_required: phone,
-            leader_question: address,
-            camp_donation: address,
-            early_arrival: address,
-            why_go: address
+            full_name: full_name,
+            phone_number: phone_number,
+            burner_email: burner_email,
+            campers: campers,
+            space_required: space_required,
+            leader_question: leader_question,
+            camp_donation: camp_donation,
+            early_arrival: early_arrival,
+            why_go: why_go
         });
         if (success) {
             handleLogin();
