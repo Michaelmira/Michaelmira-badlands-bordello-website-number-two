@@ -12,12 +12,12 @@ export const Navbar = () => {
 				</Link>
 				<div className="ml-auto">
 					{store.token ? (
-                        <button onClick={(e) => actions.logUserOut()} style={{ backgroundColor: "#dc3545", borderColor: "#dc3545", color: "white", marginRight: "10px", cursor: "pointer" }} >
+                        <button onClick={(e) => actions.logUserOut()} style={{ backgroundColor: "#575757" }} >
                             Log out
                         </button>
                     ) : (
                         <Link to="/log-in">
-                            <button className="btn border-0" style={{ backgroundColor: "#000000", color: "#828282", cursor: "pointer" }} >Log in</button>
+                            <button className="btn border-0 text-black" style={{ backgroundColor: "#575757" }} >Log in</button>
                         </Link>
                     )}
 				</div>
