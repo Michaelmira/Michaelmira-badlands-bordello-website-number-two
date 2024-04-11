@@ -27,7 +27,7 @@ export const CampQuestionnaire = () => {
             why_go: why_go
         });
         if (success) {
-            handleLogin();
+			alert("You did it! Thank you for applying to camp at the Badlands Bordello!");
         } else {
             alert("something went wrong");
         }
