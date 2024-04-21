@@ -6,11 +6,11 @@ export const Profile = (props) => {
     const {store, actions} = useContext(Context);
     const navigate = useNavigate();
 
-    useEffect(() => {
-        if ( !store.token ) {
-            navigate("/log-in");
-        }
-    }, [store.token, navigate]);
+    // useEffect(() => {
+    //     if ( !store.token ) {
+    //         navigate("/log-in");
+    //     }
+    // }, [store.token, navigate]);
     
     return (
         <div className="d-flex flex-column w-100 align-items-center" >
