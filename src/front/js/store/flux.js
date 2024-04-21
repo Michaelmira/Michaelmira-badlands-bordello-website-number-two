@@ -111,15 +111,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 					return true;
 			},
 
-			getAllQuestionnaires: async () => {
-				const response = await fetch(
-					process.env.BACKEND_URL + "/api/questionnaire",{
-						method: "GET",
-						body: 
-					}
+			// getAllQuestionnaires: async () => {
+			// 	const response = await fetch(
+			// 		process.env.BACKEND_URL + "/api/questionnaire",{
+			// 			method: "GET",
+			// 			body: JSON.stringify
+			// 			headers: {
+			// 				"Content-Type":
+			// 			}
+			// 		}
 
-				)
-			}
+			// 	)
+			// }
 
 
 		}
