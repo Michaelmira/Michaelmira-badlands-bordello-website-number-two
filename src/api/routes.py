@@ -39,7 +39,7 @@ def add_questionnaire():
     return jsonify(response_body), 201
         
 @api.route('/questionnaire/edit/<int:questionnaire_id>', methods=['PUT'])
-@jwt_required()
+# @jwt_required()
 def edit_questionnaire(questionnaire_id):
     full_name = request.json.get("full_name")
     phone_number = request.json.get("phone_number")

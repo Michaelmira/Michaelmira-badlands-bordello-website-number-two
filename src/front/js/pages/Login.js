@@ -15,7 +15,7 @@ export const Login = (props) => {
 			password: password
 		});
 		if (success) {
-            navigate("/profile");
+            navigate("/user-dashboard");
 	    } else {
         alert("something went wrong");
         }

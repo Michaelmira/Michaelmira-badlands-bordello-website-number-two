@@ -3,7 +3,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			message: null,
 			token: undefined,
-			localStorageChecked: undefined
+			localStorageChecked: undefined,
+			questionnaires: []
 		},
 
 		actions: {
@@ -111,18 +112,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 					return true;
 			},
 
-			// getAllQuestionnaires: async () => {
-			// 	const response = await fetch(
-			// 		process.env.BACKEND_URL + "/api/questionnaire",{
-			// 			method: "GET",
-			// 			body: JSON.stringify
-			// 			headers: {
-			// 				"Content-Type":
-			// 			}
-			// 		}
+			getAllQuestionnaires: async () => {
 
-			// 	)
-			// }
+				const response = await fetch(process.env.BACKEND_URL + "/api/questionnaire",{
+					method: "GET",
+					headers: {
+						"Content-Type": "application/json",
+						Authorization: "Bearer " + store.token
+					},
+				})
+				if (response.status !== 200) return false;
+				const responseBody = await response.json()
+				console.log(responseBody)
+				setStore({questionnaires: responseBody})
+				return true;
+			}
 
 
 		}
