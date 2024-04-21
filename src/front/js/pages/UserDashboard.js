@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
 
-export const UserDashboard = (questionnaires) => {
+export const UserDashboard = ({questionnaire}) => {
     const {store, actions} = useContext(Context);
     const navigate = useNavigate();
 
@@ -31,12 +31,12 @@ export const UserDashboard = (questionnaires) => {
     // }, [store.token, navigate]);
     
     return (
-        <div>
+        <div className="text-light">
             <h2>Camp Questionnaires</h2>
-            <table className="table">
+            <table className="table text-light">
                 <thead>
                 <tr>
-                    <th>Camp Id</th>
+                    <th>QnA Id</th>
                     <th>Full name</th>
                     <th>burner email</th>
                     <th>phone number</th>
@@ -49,7 +49,8 @@ export const UserDashboard = (questionnaires) => {
                 </tr>
                 </thead>
                 <tbody>
-                    {store?.questionnaires.map((questionnaire, index) => (
+                    {store.questionnaires.length > 0 ? (
+                        store.questionnaires.map((questionnaire, index) => (
                         <React.Fragment key={index}> 
                             <tr>
                                 <td>
@@ -72,7 +73,12 @@ export const UserDashboard = (questionnaires) => {
                                 <td>{questionnaire.why_go}</td>
                             </tr>
                         </React.Fragment>
-                    ))}
+                    ))
+                ) : (
+                    <tr>
+                        <td colSpan="10">Loading...</td>
+                    </tr>
+                )}
                 </tbody>
             </table>
         </div>

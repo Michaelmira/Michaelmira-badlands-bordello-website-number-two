@@ -4,7 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			message: null,
 			token: undefined,
 			localStorageChecked: undefined,
-			questionnaires: []
+			questionnaire: []
 		},
 
 		actions: {
