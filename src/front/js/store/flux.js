@@ -109,7 +109,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 					console.log(responseBody)
 
 					return true;
+			},
+
+			getAllQuestionnaires: async () => {
+				const response = await fetch(
+					process.env.BACKEND_URL + "/api/questionnaire",{
+						method: "GET",
+						body: 
+					}
+
+				)
 			}
+
+
 		}
 	};
 };
