@@ -118,7 +118,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					method: "GET",
 					headers: {
 						"Content-Type": "application/json",
-						Authorization: "Bearer " + store.token
+						// Authorization: "Bearer " + store.token
 					},
 				})
 				if (response.status !== 200) return false;
