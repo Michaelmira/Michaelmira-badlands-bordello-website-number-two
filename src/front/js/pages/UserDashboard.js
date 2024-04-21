@@ -49,36 +49,20 @@ export const UserDashboard = ({questionnaire}) => {
                 </tr>
                 </thead>
                 <tbody>
-                    {store.questionnaires.length > 0 ? (
-                        store.questionnaires.map((questionnaire, index) => (
-                        <React.Fragment key={index}> 
-                            <tr>
-                                <td>
-                                {/* <Link to={"/order/details/" + order.id } >
-                                    {order.id} 
-                                </Link> */}
-                                </td>
-                                <td>
-                                    {questionnaire.full_name}
-                                </td>
-                                <td>
-                                    {questionnaire.id} {questionnaire.burner_email}
-                                </td>
-                                <td>{questionnaire.phone_number}</td>
-                                <td>{questionnaire.campers}</td>
-                                <td>{questionnaire.space_required}</td>
-                                <td>{questionnaire.camp_donation}</td>
-                                <td>{questionnaire.early_arrival}</td>
-                                <td>{questionnaire.leadership_question}</td>
-                                <td>{questionnaire.why_go}</td>
-                            </tr>
-                        </React.Fragment>
-                    ))
-                ) : (
-                    <tr>
-                        <td colSpan="10">Loading...</td>
-                    </tr>
-                )}
+                    {store?.questionnaires.map((questionnaire, index) => (
+                        <tr key={index}>
+                            <td>{questionnaire.id}</td>
+                            <td>{questionnaire.full_name}</td>
+                            <td>{questionnaire.burner_email}</td>
+                            <td>{questionnaire.phone_number}</td>
+                            <td>{questionnaire.campers}</td>
+                            <td>{questionnaire.space_required}</td>
+                            <td>{questionnaire.camp_donation}</td>
+                            <td>{questionnaire.early_arrival}</td>
+                            <td>{questionnaire.leader_question}</td>
+                            <td>{questionnaire.why_go}</td>
+                        </tr>
+                    ))}
                 </tbody>
             </table>
         </div>

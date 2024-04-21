@@ -12,11 +12,10 @@ api = Blueprint('api', __name__)
 # Allow CORS requests to this API
 CORS(api)
 
-@api.route('/questionnaire', methods=['GET'])
+@api.route('/questionnaires', methods=['GET'])
 def all_questionnaires():
-    questionnaire = Questionnaire.query.all()
-    serialized_questionnaire = [qa.serialize() for qa in questionnaire]
-    return jsonify({"questionnaire": serialized_questionnaire}), 200
+    questionnaires = Questionnaire.query.all()
+    return jsonify([questionnaire.serialize() for questionnaire in questionnaires]), 200
 
 @api.route('/questionnaire', methods=['POST'])
 def add_questionnaire():

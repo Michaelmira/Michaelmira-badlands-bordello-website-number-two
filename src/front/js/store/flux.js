@@ -4,7 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			message: null,
 			token: undefined,
 			localStorageChecked: undefined,
-			questionnaire: []
+			questionnaires: []
 		},
 
 		actions: {
@@ -114,7 +114,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			getAllQuestionnaires: async () => {
 
-				const response = await fetch(process.env.BACKEND_URL + "/api/questionnaire",{
+				const response = await fetch(process.env.BACKEND_URL + "/api/questionnaires",{
 					method: "GET",
 					headers: {
 						"Content-Type": "application/json",
@@ -124,7 +124,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				if (response.status !== 200) return false;
 				const responseBody = await response.json()
 				console.log(responseBody)
-				setStore({questionnaires: responseBody})
+				setStore({ questionnaires: responseBody});
 				return true;
 			}
 
