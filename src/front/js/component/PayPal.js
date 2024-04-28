@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 
 
 
-export const PayPal = () => {
+export const PayPal = ( {donationAmount} ) => {
     const paypal = useRef()
 
     useEffect(() => {
@@ -16,7 +16,7 @@ export const PayPal = () => {
                             description: "Donate to the Badlands Bordello",
                             amount: {
                                 currency_code: "USD",
-                                value: 100.0,
+                                value: donationAmount,
                             },
                         },
                     ],

@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
 
-export const Login = (props) => {
+export const Login = () => {
     const navigate = useNavigate();
     const { store, actions } = useContext(Context);
 	const [email, setEmail] = useState("");

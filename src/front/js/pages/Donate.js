@@ -3,7 +3,7 @@ import { PayPal } from "../component/PayPal";
 
 export const Donate = () => {
     const [checkout, setCheckOut] = useState(false);
-
+    const [donationAmount, setDonationAmount] = useState("");
 
     return (
 		<>
@@ -11,22 +11,19 @@ export const Donate = () => {
                 <div className="row justify-content-center">
                     <div className="col-md-6">
                         <div style={{ backgroundColor: '#fff', padding: '20px', borderRadius: '10px', boxShadow: '0px 0px 50px rgba(0, 0, 0, 0.2)' }}>
-                            <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Login</h2>
+                            <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Please Enter Your Donation Amount</h2>
                             <div style={{ marginBottom: '20px' }}>
                                 <input
                                     type="email"
                                     style={{ width: '100%', padding: '10px', borderRadius: '5px', border: '1px solid #ced4da' }}
-                                    placeholder="Email" />
-                            </div>
-                            <div style={{ marginBottom: '20px' }}>
-                                <input
-                                    type="password"
-                                    style={{ width: '100%', padding: '10px', borderRadius: '5px', border: '1px solid #ced4da' }}
-                                    placeholder="Password" />
+                                    placeholder="Amount"
+                                    onChange={(e) => setDonationAmount(e.target.value)} 
+                                />
                             </div>
                             <div style={{ textAlign: 'center' }}>
                                 {checkout ? (
-                                    <PayPal />
+                                    <PayPal
+                                    donationAmount = {donationAmount} />
                                 ) : (
                                     <button
                                         type="button"
