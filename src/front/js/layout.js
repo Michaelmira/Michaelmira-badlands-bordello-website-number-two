@@ -11,6 +11,7 @@ import { CampQuestionnaire } from "./pages/CampQuestionnaire";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { UserDashboard } from "./pages/UserDashboard";
+import { Donate } from "./pages/Donate";
 
 //create your first component
 const Layout = () => {
@@ -31,6 +32,7 @@ const Layout = () => {
                         <Route element={<Profile />} path="/profile" />
                         <Route element={<CampQuestionnaire />} path="/camp-questionnaire" />
                         <Route element={<UserDashboard />} path="/user-dashboard" />
+                        <Route element={<Donate />} path="/donate" />
                         <Route element={<h1>Not found!</h1>} />
                     </Routes>
                     <Footer />
