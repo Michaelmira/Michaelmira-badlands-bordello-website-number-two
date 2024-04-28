@@ -11,6 +11,9 @@ export const Navbar = () => {
 					<h1 className="navbar-brand mb-0" style={{textDecoration: 'none', color: "#828282" }} ><strong>Badlands Bordello</strong></h1>
 				</Link>
 				<div className="ml-auto">
+					<Link to="/donate">
+						<button className="btn border-0 mx-3 text-black" style={{ backgroundColor: "#575757" }} >Donate</button>
+					</Link>
 					{store.token ? (
                         <button onClick={(e) => actions.logUserOut()} style={{ backgroundColor: "#575757" }} >
                             Log out
