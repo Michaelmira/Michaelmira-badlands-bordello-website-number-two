@@ -18,9 +18,9 @@ php_errorlog
 !.render-buildpacks.json
 
 # track webpack configs (i.e. do NOT ignore it)
-# !composer.json
+
 !webpack.config.js
-# !package.json
+
 !webpack.production.js
 !webpack.development.js
 
