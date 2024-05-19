@@ -1,7 +1,16 @@
-/*
-    home.css: This website contains selectors only used in home.css
+.bbGalleryPic {
+    width: 450px; /* Default width */
+    height: auto;
+}
 
-    All pages share the styles on index.css but you should create 
-    one more css for each page that will contain the selected used 
-    on that page only (the ones not reused in other pages).
-*/
+@media (max-width: 768px) {
+    .bbGalleryPic {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    .bbGalleryPic {
+        width: 500px; /* 500px width on larger screens */
+    }
+}
