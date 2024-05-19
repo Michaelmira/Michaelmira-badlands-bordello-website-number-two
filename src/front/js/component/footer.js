@@ -8,4 +8,3 @@ export const Footer = () => (
 		</p>
 	</footer>
 );
-// Test Test

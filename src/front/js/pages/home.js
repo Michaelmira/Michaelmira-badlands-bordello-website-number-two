@@ -50,83 +50,123 @@ export const Home = () => (
 					<div className="container-fluid" style={{ maxWidth: '1600px' }} >
 						<div className="row row-cols-1 row-cols-md-3 d-flex justify-content-center">
 							<div className="col mb-4">
-								<img className="bbGalleryPic" style={{ width: '508px' }} src="https://i.ibb.co/F3KJ03P/10-Wavelink4.jpg" />
+								<img className="bbGalleryPic" style={{ width: '500px' }} src="https://i.ibb.co/F3KJ03P/10-Wavelink4.jpg" />
 							</div>
 							<div className="col mb-4">
-								<img className="bbGalleryPic " style={{ width: '508px' }} src="https://i.ibb.co/L82LC25/8-Frontage-And-Wavelink.jpg" />
+								<img className="bbGalleryPic " style={{ width: '500px' }} src="https://i.ibb.co/L82LC25/8-Frontage-And-Wavelink.jpg" />
 							</div>
 							<div className="col mb-4">
-								<img className="bbGalleryPic " style={{ width: '508px' }} src="https://i.ibb.co/NZHMBKp/3-Wavelink1.jpg" />
-							</div>
-						</div>
-						<div className="row d-flex justify-content-center">
-							<div className="col mb-4">
-								<img className="bbGalleryPic " style={{ width: '508px' }}  src="https://i.ibb.co/qpz2DD6/4-Interiorparty.jpg" />
-							</div>
-							<div className="col mb-4">
-								<img className="bbGalleryPic " style={{ width: '508px' }} src="https://i.ibb.co/fNYnQYq/5photoOp.jpg" />
-							</div>
-							<div className="col mb-4">
-								<img className="bbGalleryPic " style={{ width: '508px' }} src="https://i.ibb.co/ryXdZnX/6-Wavelink2.jpg" />
+								<img className="bbGalleryPic " style={{ width: '500px' }} src="https://i.ibb.co/NZHMBKp/3-Wavelink1.jpg" />
 							</div>
 						</div>
-						<div className="row d-flex justify-content-center">
+						<div className="row row-cols-1 row-cols-md-3 d-flex justify-content-center">
 							<div className="col mb-4">
-								<img className="bbGalleryPic " style={{ width: '508px' }} src="https://i.ibb.co/kyBS1dY/7-Wavelink3.jpg" />
+								<img className="bbGalleryPic " style={{ width: '500px' }}  src="https://i.ibb.co/qpz2DD6/4-Interiorparty.jpg" />
 							</div>
 							<div className="col mb-4">
-								<img className="bbGalleryPic "style={{ width: '508px' }} src="https://i.ibb.co/YjqzBD0/2groupphoto2017.jpg" />
+								<img className="bbGalleryPic " style={{ width: '500px' }} src="https://i.ibb.co/fNYnQYq/5photoOp.jpg" />
 							</div>
 							<div className="col mb-4">
-								<img className="bbGalleryPic "style={{ width: '508px' }} src="https://i.ibb.co/Y23Vcnb/9-Interior1.jpg" />
-							</div>
-						</div>
-					
-					
-						<div className="row d-flex justify-content-center">
-							<div className="col mb-4">
-								<img className="bbGalleryPic "style={{ width: '508px' }} src="https://i.ibb.co/fX4M85f/1frontage2017.jpg" />
-							</div>
-							<div className="col mb-4">
-								<img className="bbGalleryPic "style={{ width: '508px' }} src="https://i.ibb.co/z7QPcBN/11-Interior2.jpg" />
-							</div>
-							<div className="col mb-4">
-								<img className="bbGalleryPic "style={{ width: '508px' }} src="https://i.ibb.co/bvYrFWX/12-Wavelink5.jpg" />
+								<img className="bbGalleryPic " style={{ width: '500px' }} src="https://i.ibb.co/ryXdZnX/6-Wavelink2.jpg" />
 							</div>
 						</div>
-						<div className="row d-flex justify-content-center">
+						<div className="row row-cols-1 row-cols-md-3 d-flex justify-content-center">
 							<div className="col mb-4">
-								<img className="bbGalleryPic "style={{ width: '508px' }} src="https://i.ibb.co/nRk87X1/13-Interior3.jpg" />
+								<img className="bbGalleryPic " style={{ width: '500px' }} src="https://i.ibb.co/kyBS1dY/7-Wavelink3.jpg" />
 							</div>
 							<div className="col mb-4">
-								<img className="bbGalleryPic "style={{ width: '508px' }} src="https://i.ibb.co/h977Gf6/14-Waveline-And-Disco-Fish.jpg" />
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://i.ibb.co/YjqzBD0/2groupphoto2017.jpg" />
 							</div>
 							<div className="col mb-4">
-								<img className="bbGalleryPic "style={{ width: '508px' }} src="https://i.ibb.co/9VpP4BC/15-Door-Solo.jpg" />
-							</div>
-						</div>
-						<div className="row d-flex justify-content-center">
-							<div className="col mb-4">
-								<img className="bbGalleryPic "style={{ width: '508px' }} src="https://i.ibb.co/1XZXgd8/16-Interior4.jpg" />
-							</div>
-							<div className="col mb-4">
-								<img className="bbGalleryPic "style={{ width: '508px' }} src="https://i.ibb.co/C1ywVGz/17-interior5.jpg" />
-							</div>
-							<div className="col mb-4">
-								<img className="bbGalleryPic "style={{ width: '508px' }} src="https://i.ibb.co/0hMfBWJ/18interior6.jpg" />
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://i.ibb.co/Y23Vcnb/9-Interior1.jpg" />
 							</div>
 						</div>
-					
-					
-						<div className="row d-flex justify-content-center">
+						<div className="row row-cols-1 row-cols-md-3 d-flex justify-content-center">
 							<div className="col mb-4">
-								<img className="bbGalleryPic "style={{ width: '508px' }} src="https://i.ibb.co/J3MWb4L/19interior7.jpg" />
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://i.ibb.co/fX4M85f/1frontage2017.jpg" />
 							</div>
 							<div className="col mb-4">
-								<img className="bbGalleryPic "style={{ width: '508px' }} src="https://i.ibb.co/26HWv5x/20people.jpg" />
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://i.ibb.co/z7QPcBN/11-Interior2.jpg" />
 							</div>
 							<div className="col mb-4">
-								<img className="bbGalleryPic "style={{ width: '508px' }} src="https://i.ibb.co/wK6fN3v/21people2.jpg" />
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://i.ibb.co/bvYrFWX/12-Wavelink5.jpg" />
+							</div>
+						</div>
+						<div className="row row-cols-1 row-cols-md-3 d-flex justify-content-center">
+							<div className="col mb-4">
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://i.ibb.co/nRk87X1/13-Interior3.jpg" />
+							</div>
+							<div className="col mb-4">
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://i.ibb.co/h977Gf6/14-Waveline-And-Disco-Fish.jpg" />
+							</div>
+							<div className="col mb-4">
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://i.ibb.co/9VpP4BC/15-Door-Solo.jpg" />
+							</div>
+						</div>
+						<div className="row row-cols-1 row-cols-md-3 d-flex justify-content-center">
+							<div className="col mb-4">
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://i.ibb.co/1XZXgd8/16-Interior4.jpg" />
+							</div>
+							<div className="col mb-4">
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://i.ibb.co/C1ywVGz/17-interior5.jpg" />
+							</div>
+							<div className="col mb-4">
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://i.ibb.co/0hMfBWJ/18interior6.jpg" />
+							</div>
+						</div>
+						<div className="row row-cols-1 row-cols-md-3 d-flex justify-content-center">
+							<div className="col mb-4">
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://i.ibb.co/J3MWb4L/19interior7.jpg" />
+							</div>
+							<div className="col mb-4">
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://i.ibb.co/26HWv5x/20people.jpg" />
+							</div>
+							<div className="col mb-4">
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://i.ibb.co/wK6fN3v/21people2.jpg" />
+							</div>
+						</div>	
+						<div className="row row-cols-1 row-cols-md-3 d-flex justify-content-center">
+							<div className="col mb-4">
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://res.cloudinary.com/dufs8hbca/image/upload/v1716138812/IMG_1660_jlilaq.jpg" />
+							</div>
+							<div className="col mb-4">
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://res.cloudinary.com/dufs8hbca/image/upload/v1716138812/IMG_1663_hml11r.jpg" />
+							</div>
+							<div className="col mb-4">
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://res.cloudinary.com/dufs8hbca/image/upload/v1716138812/IMG_1661_s8nclx.jpg" />
+							</div>
+						</div>
+						<div className="row row-cols-1 row-cols-md-3 d-flex justify-content-center">
+							<div className="col mb-4">
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://res.cloudinary.com/dufs8hbca/image/upload/v1716138813/IMG_1662_rzvjzy.jpg" />
+							</div>
+							<div className="col mb-4">
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://res.cloudinary.com/dufs8hbca/image/upload/v1716138813/IMG_1664_djustj.jpg" />
+							</div>
+							<div className="col mb-4">
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://res.cloudinary.com/dufs8hbca/image/upload/v1716138813/IMG_1666_wk0sep.jpg" />
+							</div>
+						</div>
+						<div className="row row-cols-1 row-cols-md-3 d-flex justify-content-center">
+							<div className="col mb-4">
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://res.cloudinary.com/dufs8hbca/image/upload/v1716138813/IMG_1665_czdtd7.jpg" />
+							</div>
+							<div className="col mb-4">
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://res.cloudinary.com/dufs8hbca/image/upload/v1716138813/IMG_1667_buyy5m.jpg" />
+							</div>
+							<div className="col mb-4">
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://res.cloudinary.com/dufs8hbca/image/upload/v1716138813/IMG_1668_cum3m6.jpg" />
+							</div>
+						</div>
+						<div className="row row-cols-1 row-cols-md-3 d-flex justify-content-center">
+							<div className="col mb-4">
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://res.cloudinary.com/dufs8hbca/image/upload/v1716138815/IMG_1669_n9o3s1.jpg" />
+							</div>
+							<div className="col mb-4">
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://res.cloudinary.com/dufs8hbca/image/upload/v1716138815/IMG_1670_m0mp3z.jpg" />
+							</div>
+							<div className="col mb-4">
+								<img className="bbGalleryPic "style={{ width: '500px' }} src="https://res.cloudinary.com/dufs8hbca/image/upload/v1716138815/IMG_1672_mx0jqy.jpg" />
 							</div>
 						</div>
 					</div >
