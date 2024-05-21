@@ -20,7 +20,7 @@ class User(db.Model):
         }
 
 class Questionnaire(db.Model):
-    __tablename__="questionnaire"
+    __tablename__="questionnaires"
     id = db.Column(db.Integer, primary_key=True)
     full_name = db.Column(db.String(50), unique=False, nullable=False)
     phone_number =  db.Column(db.String(50), unique=False, nullable=False)
