@@ -1,16 +1,64 @@
 .bbGalleryPic {
     width: 450px; /* Default width */
     height: auto;
-}
-
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     .bbGalleryPic {
         width: 100%; /* Full width on smaller screens */
     }
-}
-
-@media (min-width: 1200px) {
+  }
+  
+  @media (min-width: 1200px) {
     .bbGalleryPic {
         width: 500px; /* 500px width on larger screens */
     }
-}
+  }
+  
+  #cardDiv {
+    overflow-y: hidden !important;
+  }
+  
+  #cardDiv {
+    overflow: auto; /* Enable scrolling */
+    scrollbar-width: thin; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  
+  #cardDiv::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar width */
+    height: 0; /* Remove scrollbar height */
+  }
+  
+  #cardDiv::-webkit-scrollbar-track {
+    background-color: transparent; /* Hide scrollbar track */
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .content {
+    position: absolute;
+    top: 50%; /* Position content in the middle vertically */
+    left: 50%; /* Position content in the middle horizontally */
+    transform: translate(-50%, -50%); /* Center content */
+    width: 90%; /* Set width to 90% of the viewport width */
+    max-height: 90%; /* Set max height to 90% of the viewport height */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+    scrollbar-width: none;
+    z-index: 1; /* Ensure the content is above the video */
+  }
+  
+  .card-title {
+    margin-bottom: 0.2rem; /* Adjust the margin bottom */
+  }
+  
+  .card-text {
+    margin-bottom: 0.2rem; /* Adjust the margin bottom */
+  }

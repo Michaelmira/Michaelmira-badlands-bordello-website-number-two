@@ -4,72 +4,68 @@ import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
     const navigate = useNavigate();
-    const { store, actions } = useContext(Context);
-	const [email, setEmail] = useState("");
-	const [password, setPassword] = useState("");
-	const handleLogin = async(event) => {
-		// validate there is an email
-		// validate there is a password
-		const success = await actions.logIn({
-			email: email,
-			password: password
-		});
-		if (success) {
+    const { actions } = useContext(Context);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const handleLogin = async (event) => {
+        // validate there is an email
+        // validate there is a password
+        const success = await actions.logIn({
+            email: email,
+            password: password
+        });
+        if (success) {
             navigate("/user-dashboard");
-	    } else {
-        alert("something went wrong");
+        } else {
+            alert("something went wrong");
         }
     }
 
-    const [formVisible, setFormVisible] = useState(false); // State to control visibility of the form
-	useEffect(() => {
-        // Show the form with fade-in effect when the component is mounted
-        setFormVisible(true);
-    }, []);
-
 
     return (
-		<div className="container pt-5 ">
+        <div className="container  pt-5 ">
             {/* Apply animation classes based on formVisible state */}
-            <div className={`row justify-content-center animate__animated ${formVisible ? 'animate__fadeIn' : 'animate__fadeOut'}`} style={{ animationDuration: '0.5s' }}>
-                <div className="col-md-6" style={{ opacity: formVisible ? '1' : '0' }}>
-                    <div style={{ backgroundColor: '#fff', padding: '20px', borderRadius: '10px', boxShadow: '0px 0px 50px rgba(0, 0, 0, 0.2)' }}>
-                        <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Login</h2>
-                        <div style={{ marginBottom: '20px' }}>
+            <div className="row justify-content-center animate__animated">
+                <div className="card col-md-6 pb-5 px-0 mb-5 border-dark border-2 shadow-lg" >
+                    <div className="card-header" style={{ height: "70px", backgroundColor: "#000000", backgroundImage: 'url("https://www.transparenttextures.com/patterns/wood-pattern.png")' }} >
+                        <h1 className="fs-4 m text-light"  ><strong>Login</strong></h1>
+                    </div>
+                    <div >
+                        <div className="px-5 pt-4">
                             <input
                                 type="email"
-                                style={{ width: '100%', padding: '10px', borderRadius: '5px', border: '1px solid #ced4da' }}
+                                className="border-dark rounded-3 border-2 shadow-sm"
+                                style={{ width: '100%', padding: '10px' }}
                                 placeholder="Email"
                                 value={email}
                                 onChange={(event) => setEmail(event.target.value)}
                             />
                         </div>
-                        <div style={{ marginBottom: '20px' }}>
+                        <div className="px-5 py-4 ">
                             <input
                                 type="password"
-                                style={{ width: '100%', padding: '10px', borderRadius: '5px', border: '1px solid #ced4da' }}
+                                className="border-dark rounded-3 border-2 shadow-sm"
+                                style={{ width: '100%', padding: '10px'}}
                                 placeholder="Password"
                                 value={password}
                                 onChange={(event) => setPassword(event.target.value)}
                             />
                         </div>
                         <div style={{ textAlign: 'center' }}>
-                        <button
+                            <button
                                 type="button"
-                                style={{ 
-                                    backgroundColor: '#007bff', 
-                                    color: '#fff', 
-                                    border: 'none', 
-                                    borderRadius: '5px', 
-                                    padding: '10px 20px', 
+                                style={{
+                                    backgroundColor: '#007bff',
+                                    color: '#fff',
+                                    border: 'none',
+                                    borderRadius: '5px',
+                                    padding: '10px 20px',
                                     cursor: 'pointer',
                                     boxShadow: '0px 5px 10px rgba(0, 0, 0, 0.2)',
                                     transition: 'box-shadow 0.3s ease',
                                     outline: 'none',
                                 }}
                                 onClick={handleLogin}
-                                onMouseEnter={(e) => e.target.style.boxShadow = '0px 8px 15px rgba(0, 0, 0, 0.3)'}
-                                onMouseLeave={(e) => e.target.style.boxShadow = '0px 5px 10px rgba(0, 0, 0, 0.2)'}
                             >
                                 Submit
                             </button>
@@ -78,5 +74,5 @@ export const Login = () => {
                 </div>
             </div>
         </div>
-	);
+    );
 }

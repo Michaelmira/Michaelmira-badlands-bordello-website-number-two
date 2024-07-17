@@ -6,25 +6,30 @@ export const Donate = () => {
     const [donationAmount, setDonationAmount] = useState("");
 
     return (
-		<>
-        {/* comment112333 */}
-            <div className="container py-5 ">
+        <>
+            {/* comment112333 */}
+            <div className="container py-5  ">
                 <div className="row justify-content-center">
-                    <div className="col-md-6">
-                        <div style={{ backgroundColor: '#fff', padding: '20px', borderRadius: '10px', boxShadow: '0px 0px 50px rgba(0, 0, 0, 0.2)' }}>
-                            <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Please Enter Your Donation Amount</h2>
+
+                    <div className="card col-md-6 border-dark border-2 shadow-lg p-0 ">
+                        <div className="card-header" style={{ height: "70px", backgroundColor: "#000000", backgroundImage: 'url("https://www.transparenttextures.com/patterns/wood-pattern.png")' }} >
+                            <h1 className="fs-4 text-light"  ><strong>Please Enter Your Donation Amount</strong></h1>
+                        </div>
+                        <div className="" style={{ padding: '20px' }}>
+
                             <div style={{ marginBottom: '20px' }}>
                                 <input
                                     type="email"
+                                    className="border-dark border-2"
                                     style={{ width: '100%', padding: '10px', borderRadius: '5px', border: '1px solid #ced4da' }}
                                     placeholder="Amount"
-                                    onChange={(e) => setDonationAmount(e.target.value)} 
+                                    onChange={(e) => setDonationAmount(e.target.value)}
                                 />
                             </div>
                             <div style={{ textAlign: 'center' }}>
                                 {checkout ? (
                                     <PayPal
-                                    donationAmount = {donationAmount} />
+                                        donationAmount={donationAmount} />
                                 ) : (
                                     <button
                                         type="button"
@@ -41,7 +46,7 @@ export const Donate = () => {
                                         }}
                                         onClick={() => {
                                             setCheckOut(true);
-                                        } }
+                                        }}
                                     >
                                         Checkout
                                     </button>
@@ -52,5 +57,5 @@ export const Donate = () => {
                 </div>
             </div>
         </>
-	);
+    );
 }
